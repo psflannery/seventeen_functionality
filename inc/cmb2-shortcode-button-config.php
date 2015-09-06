@@ -5,8 +5,8 @@
  * Be sure to replace all instances of 'yourprefix_' with your project's prefix.
  * http://nacin.com/2010/05/11/in-wordpress-prefix-everything/
  *
- * @category Opening Times
- * @package  OT functionality
+ * @category Seventeen
+ * @package  Seventeen functionality
  * @license  http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
  * @link     https://github.com/WebDevStudios/CMB2
  */
@@ -24,8 +24,8 @@ $js_button_data = array(
     'icon'           => 'dashicons-layout',
 
     // Optional parameters
-    'author'         => 'Justin Sternberg',
-    'authorurl'      => 'http://dsgnwrks.pro',
+    'author'         => 'Paul Flannery',
+    'authorurl'      => 'http://paulflannery.co.uk',
     'infourl'        => 'https://github.com/jtsternberg/Shortcode_Button',
     'version'        => '1.0.0',
 
@@ -72,5 +72,4 @@ function shortcode_button_cmb_config( $button_data ) {
             ),
         ),
     );
-
 }

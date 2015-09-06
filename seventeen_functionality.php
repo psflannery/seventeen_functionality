@@ -12,11 +12,13 @@
  * Plugin Name:	Seventeen functionality
  * Plugin URI:	http://otdac.org
  * Description:	Core functionality for the Seventeen website. Registers functions that exist independently of the theme - Custom Post Types, Custom Taxonomies and other bits of goodness.
- * Version: 	0.1
+ * Version: 	0.1.1
  * Author: 		Paul Flannery
  * Author URI:	http://paulflannery.co.uk
  * Text Domain:	seventeen
  * License: 	GPL-2.0+
+ * GitHub Plugin URI: https://github.com/psflannery/seventeen_functionality
+ * GitHub Branch: master
  *
  * Copyright 2011 Paul Flannery <psflannery@gmail.com>
  *
@@ -36,10 +38,11 @@
  */
 // Plugin Directory 
 define( 'SEVENTEEN_DIR', dirname( __FILE__ ) );
+include_once( SEVENTEEN_DIR . '/inc/cmb2-metaboxes.php' );
+include_once( SEVENTEEN_DIR . '/inc/cmb2-shortcode-button.php' );
+include_once( SEVENTEEN_DIR . '/inc/cmb2-shortcode-button-config.php' );
 include_once( SEVENTEEN_DIR . '/inc/contact-widget.php' );
 include_once( SEVENTEEN_DIR . '/inc/custom_post_types.php' );
-include_once( SEVENTEEN_DIR . '/inc/shortcodes.php' );
-//include_once( SEVENTEEN_DIR . '/inc/shortcode_buttons.php' );
-include_once( SEVENTEEN_DIR . '/inc/housekeeping.php' );
 include_once( SEVENTEEN_DIR . '/inc/editor-style-refresh.php' );
-include_once( SEVENTEEN_DIR . '/inc/metaboxes.php' );
+include_once( SEVENTEEN_DIR . '/inc/housekeeping.php' );
+include_once( SEVENTEEN_DIR . '/inc/shortcodes.php' );

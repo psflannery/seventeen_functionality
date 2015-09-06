@@ -7,15 +7,30 @@
  *
  * @subpackage: seventeen
  * @subpackage: CMB2
+ *
+ * text domain: seventeen
  */
- 
+
+/**
+ * Localise any date picker form in CMB2.
+ * See http://api.jqueryui.com/datepicker/ for more info.
+ * Refer to the CMB Field Types Wiki entry
+ * if you wish to implement a different date format
+ * per meta field using date_format.
+ */
+add_filter( 'cmb2_localized_data', 'seventeen_cmb_set_date_format' );
+function seventeen_cmb_set_date_format( $l10n ) {
+	$l10n['defaults']['date_picker']['dateFormat'] = 'dd-mm-yy';
+	return $l10n;
+} 
+
 add_action( 'cmb2_init', 'seventeen_register_exhibition_dates' );
 function seventeen_register_exhibition_dates() {
 	$prefix = '_seventeen_';
 
 	$exhibition_dates = new_cmb2_box( array(
 		'id'            => $prefix . 'exhibition_dates',
-		'title'         => __( 'Exhibition Dates', 'cmb2' ),
+		'title'         => __( 'Exhibition Dates', 'seventeen' ),
 		'object_types'  => array( 'exhibitions', ),
 		'context'    => 'normal',
 		'priority'   => 'high',
@@ -23,19 +38,19 @@ function seventeen_register_exhibition_dates() {
 	) );
 	
 	$exhibition_dates->add_field( array(
-		'name'        => __( 'Start Date', 'cmb2' ),
-		'desc'        => __( 'The date the exhibition opens', 'cmb2' ),
+		'name'        => __( 'Start Date', 'seventeen' ),
+		'desc'        => __( 'The date the exhibition opens', 'seventeen' ),
 		'id'          => $prefix . 'startdate',
 		'type'        => 'text_date_timestamp',
-		'date_format' => __( 'd-m-Y', 'cmb2' ), 
+		'date_format' => __( 'd-m-Y', 'seventeen' ), 
 	) );
 	
 	$exhibition_dates->add_field( array(
-		'name'        => __( 'End Date', 'cmb2' ),
-		'desc'        => __( 'The date and time the exhibition closes', 'cmb2' ),
+		'name'        => __( 'End Date', 'seventeen' ),
+		'desc'        => __( 'The date and time the exhibition closes', 'seventeen' ),
 		'id'          => $prefix . 'enddate',
 		'type'        => 'text_datetime_timestamp',
-		'date_format' => __( 'd-m-Y', 'cmb2' ), 
+		'date_format' => __( 'd-m-Y', 'seventeen' ), 
 	) );
 }
  
