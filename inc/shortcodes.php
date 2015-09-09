@@ -20,7 +20,7 @@ function block( $atts, $content = null ) {
 add_shortcode('block', 'seventeen_block_shortcode');
 function seventeen_block_shortcode( $atts, $content = null ) {
 	$block = shortcode_atts( array(
-		'class' => '',
+		'class' => 'block',
 	), $atts );
 
 	return '<div class="' . esc_attr($block['class']) . '">' . $content . '</div>';
