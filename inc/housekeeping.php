@@ -100,3 +100,14 @@ function seventeen_clean_shortcodes($content) {
 	return $content;
 }
 add_filter('the_content', 'seventeen_clean_shortcodes');
+
+/*
+ * Add super and sub script buttons to tinymce. Disabled by default.
+ */
+function seventeen_mce_buttons_2($buttons) {	
+	$buttons[] = 'superscript';
+	$buttons[] = 'subscript';
+
+	return $buttons;
+}
+add_filter('mce_buttons_2', 'seventeen_mce_buttons_2');
