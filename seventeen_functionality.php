@@ -12,7 +12,7 @@
  * Plugin Name:	Seventeen functionality
  * Plugin URI:	http://otdac.org
  * Description:	Core functionality for the Seventeen website. Registers functions that exist independently of the theme - Custom Post Types, Custom Taxonomies and other bits of goodness.
- * Version: 	0.1.5
+ * Version: 	0.1.6
  * Author: 		Paul Flannery
  * Author URI:	http://paulflannery.co.uk
  * Text Domain:	seventeen
