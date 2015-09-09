@@ -111,3 +111,8 @@ function seventeen_mce_buttons_2($buttons) {
 	return $buttons;
 }
 add_filter('mce_buttons_2', 'seventeen_mce_buttons_2');
+
+/*
+ * Hide the Github Updater settings page.
+ */
+add_filter( 'github_updater_hide_settings', '__return_true' );
