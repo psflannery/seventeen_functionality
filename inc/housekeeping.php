@@ -93,7 +93,7 @@ add_filter ( 'manage_edit-page_columns', 'seventeen_remove_columns' );
 function seventeen_clean_shortcodes($content) {   
 	$array = array (
 		'<p>[' => '[', 
-		']</p>' => ']', 
+		']</p>' => ']',
 		']<br />' => ']'
 	);
 	$content = strtr($content, $array);

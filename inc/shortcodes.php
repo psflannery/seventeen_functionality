@@ -32,7 +32,8 @@ function seventeen_block_shortcode( $atts, $content = null ) {
  * Example usage: div id="foo" class="bar"]
  */
 add_shortcode('div', 'seventeen_div_shortcode');
-function seventeen_div_shortcode($atts) {
+//function seventeen_div_shortcode($atts) {
+function seventeen_div_shortcode($atts, $content = null) {
 	extract(shortcode_atts(array('class' => '', 'id' => '' ), $atts));
 	$return = '<div';
 	if (!empty($class)) $return .= ' class="'.$class.'"';
